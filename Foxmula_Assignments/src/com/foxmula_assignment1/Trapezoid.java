@@ -36,11 +36,5 @@ public class Trapezoid extends Quadrilateral {
 		return ar;
 		
 	}
-	public static void main(String[] args) {
-		// Assuming that top left is (x1,y1) the top right (x2,y2) bottom left is (x3,y3) bottom right is (x4,y4)
-		Trapezoid trapezoid=new Trapezoid(-2,2,2,2,6,0,-6,0);
-		//Assumption in Trapazious parallel sides can be on up or down but not on left and right
-		System.out.println("Area of Trapazoid:"+trapezoid.area());
-	}
 
 }

@@ -9,10 +9,6 @@ public class Square extends Quadrilateral {
 	double area() {
 		return side1*side1;
 	}
-	public static void main(String[] args) {
-		// Assuming that top left is (x1,y1) the top right (x2,y2) bottom left is (x3,y3) bottom right is (x4,y4)
-		Square square= new Square(0,2,2,2,2,0,0,0);
-		System.out.println("Area of Square:"+square.area());
-	}
+	
 
 }

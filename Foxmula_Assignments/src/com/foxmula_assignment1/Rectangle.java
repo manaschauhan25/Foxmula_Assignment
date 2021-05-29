@@ -11,10 +11,5 @@ public class Rectangle extends Quadrilateral {
 		return side1*side2;
 	}
 	
-	public static void main(String[] args) {
-		// Assuming that top left is (x1,y1) the top right (x2,y2) bottom left is (x3,y3) bottom right is (x4,y4)
-		Rectangle rectangle= new Rectangle(0,2,3,2,3,0,0,4);
-		System.out.println("Area of Square:"+rectangle.area());
-	}
 
 }

@@ -43,13 +43,5 @@ public class Parallelogram extends Quadrilateral {
 	
 	}
 	
-	public static void main(String[] args) {
-		// Assuming that top left is (x1,y1) the top right (x2,y2) bottom left is (x3,y3) bottom right is (x4,y4)
-		Parallelogram paralleogram=new Parallelogram(7,5,16,5,9,0,0,0);
-		//Assumption Paralleogram can be made only by changing x1 and x4 not considering for y1 and y2
-		System.out.println("Area of Paralleogram:"+paralleogram.area());
-
-		
-	}
 
 }

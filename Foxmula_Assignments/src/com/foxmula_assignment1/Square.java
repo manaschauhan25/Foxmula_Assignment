@@ -7,7 +7,7 @@ public class Square extends Quadrilateral {
 	
 	}
 	double area() {
-		return side1*side1;
+		return (super.getSide1()) * (super.getSide1());
 	}
 	
 

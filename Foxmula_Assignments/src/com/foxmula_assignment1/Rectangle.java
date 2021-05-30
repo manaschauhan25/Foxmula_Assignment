@@ -8,7 +8,7 @@ public class Rectangle extends Quadrilateral {
 		
 	}
 	double area() {
-		return side1*side2;
+		return (super.getSide1()) * (super.getSide2());
 	}
 	
 

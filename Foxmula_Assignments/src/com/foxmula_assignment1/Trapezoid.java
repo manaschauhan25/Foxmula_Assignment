@@ -10,15 +10,25 @@ public class Trapezoid extends Quadrilateral {
 	}
 	double area() {
 		
-		float m;
+		double m;
 		double ar=0;
+		double x1=super.getX1();
+		double x3=super.getX3();
+		double y3=super.getY3();
+		double y1=super.getY1();
+		double x4=super.getX4();
+		double y4=super.getY4();
+		double x2=super.getX2();
+		double y2=super.getY2();
+		double side4=super.getSide4();
+		double side1=super.getSide1();
 		
 		if(x1>x4) {
 			
 			
 			m=(y4-y3)/(x4-x3);
-			float x=(x1+m*y1+m*m*x3-m*y3)/(1+m*m);
-			float y=(y3+m*x1-m*x3+m*m*y1)/(1+m*m);
+			double x=(x1+m*y1+m*m*x3-m*y3)/(1+m*m);
+			double y=(y3+m*x1-m*x3+m*m*y1)/(1+m*m);
 			double height=Math.sqrt(Math.pow(Math.abs(x-x1),2)+Math.pow(Math.abs(y-y1),2));
 			
 			ar=((side1+side4)*height)/2;
@@ -27,8 +37,8 @@ public class Trapezoid extends Quadrilateral {
 				
 			
 			m=(y1-y2)/(x1-x2);
-			float x=(x4+m*y4+m*m*x2-m*y2)/(1+m*m);
-			float y=(y2+m*x4-m*x2+m*m*y4)/(1+m*m);
+			double x=(x4+m*y4+m*m*x2-m*y2)/(1+m*m);
+			double y=(y2+m*x4-m*x2+m*m*y4)/(1+m*m);
 			double height=Math.sqrt(Math.pow(Math.abs(x-x1),2)+Math.pow(Math.abs(y-y1),2));
 			System.out.print("++"+x);
 			ar=((side1+side4)*height)/2;

@@ -8,7 +8,7 @@ public class Stack extends Node {
 	private int size=0;		// Number of elements in the stack
 	
 	// Defining Node class
-	Node topNode=null;
+	private Node topNode;
 	
 	Stack(){
 		this.topNode=null;
@@ -16,7 +16,7 @@ public class Stack extends Node {
 	
 	public void push(int data) {
 		Node node=new Node(data);
-		node.next=this.topNode;
+		node.setNext(this.topNode);
 		this.topNode=node;
 		size++;
 	}
@@ -25,7 +25,7 @@ public class Stack extends Node {
 			System.out.println("StackUnderflow");
 			return;
 		}
-		this.topNode=this.topNode.next;
+		this.topNode=(this.topNode.getNext());
 		size--;
 		
 	}
@@ -59,8 +59,8 @@ public class Stack extends Node {
 		Node traverseNode=prStack.topNode;
 		System.out.print("[");
 		while(traverseNode!=null) {
-			System.out.print(traverseNode.data+" ");
-			traverseNode=traverseNode.next;
+			System.out.print(traverseNode.getData()+" ");
+			traverseNode=traverseNode.getNext();
 		}
 		System.out.println("]");
 		

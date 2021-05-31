@@ -1,6 +1,7 @@
 package com.foxmula_assignment2;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class Check_isEmpty {
 	static void isEmpty(ArrayList list) {
@@ -11,21 +12,18 @@ public class Check_isEmpty {
 		
 	}
 	public static void main(String[] args) {
-		ArrayList list=new ArrayList();
+		Scanner scanner=new Scanner(System.in);
+		System.out.print("Enter the Size of Array List:");
+		int size=Integer.parseInt(scanner.nextLine());
+		if(size>0)
+			System.out.println("Enter the elements");
+		ArrayList list=new ArrayList(size);
+		for(int i=0;i<size;i++) {
+			String element=scanner.nextLine();
+			list.add(element);
+		}
 		isEmpty(list);
-		list.add("1");
-		isEmpty(list);
-		list.add("2");
-		list.remove(0);
-		list.remove(0);
-		isEmpty(list);
-		list.add("3");
-		list.add("4");
-		isEmpty(list);
-		list.add("5");
-		list.clear();
-		isEmpty(list);
-		
+
 	}
 
 }

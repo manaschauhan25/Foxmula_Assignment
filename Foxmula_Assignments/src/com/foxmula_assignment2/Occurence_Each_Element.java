@@ -3,6 +3,7 @@ package com.foxmula_assignment2;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Scanner;
 
 
 public class Occurence_Each_Element {
@@ -22,19 +23,16 @@ public class Occurence_Each_Element {
 		System.out.println(map.toString());
 	}
 	public static void main(String[] args) {
-		ArrayList list=new ArrayList();
-		list.add(2);
-		list.add(3);
-		list.add(1);
-		list.add(3);
-		list.add(1);
-		list.add(2);
-		list.add(1);
-		list.add(3);
-		list.add(1);
-		list.add(3);
-		list.add(1);
-		list.add(2);
+		Scanner scanner=new Scanner(System.in);
+		System.out.print("Enter the Size of Array List:");
+		int size=Integer.parseInt(scanner.nextLine());
+		if(size>0)
+			System.out.println("Enter the elements");
+		ArrayList list=new ArrayList(size);
+		for(int i=0;i<size;i++) {
+			String element=scanner.nextLine();
+			list.add(element);
+		}
 		frequency(list);
 		
 	}

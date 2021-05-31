@@ -2,6 +2,7 @@ package com.foxmula_assignment2;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Scanner;
 
 public class Pair_Sum {
 	static ArrayList get_pair(ArrayList<Integer> list,int sum) {
@@ -22,14 +23,18 @@ public class Pair_Sum {
 		
 	}
 	public static void main(String[] args) {
-		ArrayList list=new ArrayList();
-		int sum=4;
-		list.add(1);
-		list.add(3);
-		list.add(1);
-		list.add(5);
-		list.add(1);
-		list.add(4);
+		Scanner scanner=new Scanner(System.in);
+		System.out.print("Enter the Size of Array List:");
+		int size=Integer.parseInt(scanner.nextLine());
+		if(size>0)
+			System.out.println("Enter the elements");
+		ArrayList list=new ArrayList(size);
+		for(int i=0;i<size;i++) {
+			int element=scanner.nextInt();
+			list.add(element);
+		}
+		System.out.print("Enter the sum for checking pairs:");
+		int sum=scanner.nextInt();
 		ArrayList answer=get_pair(list, sum);
 		if(answer.isEmpty())
 			System.out.println("No pair");

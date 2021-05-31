@@ -2,6 +2,7 @@ package com.foxmula_assignment2;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Scanner;
 
 public class Traverse_HashSet {
 	
@@ -13,12 +14,16 @@ public class Traverse_HashSet {
 		System.out.println("]");
 	}
 	public static void main(String[] args) {
-		HashSet<String> set=new HashSet<String>();
-		set.add("1");
-		set.add("2");
-		set.add("3");
-		set.add("4");
-		set.add("5");
+		Scanner scanner=new Scanner(System.in);
+		System.out.print("Enter the Size of Hash Set:");
+		int size=Integer.parseInt(scanner.nextLine());
+		if(size>0)
+			System.out.println("Enter the elements");
+		HashSet<String> set=new HashSet<String>(size);
+		for(int i=0;i<size;i++) {
+			String element=scanner.nextLine();
+			set.add(element);
+		}
 		display(set);
 	}
 

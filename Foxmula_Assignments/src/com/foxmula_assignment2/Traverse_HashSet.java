@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Traverse_HashSet {
 	
-	static void display(HashSet set) {
+	private static void display(HashSet set) {
 		Iterator iterable=set.iterator();
 		System.out.print("[ ");
 		while(iterable.hasNext())

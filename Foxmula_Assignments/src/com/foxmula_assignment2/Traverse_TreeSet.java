@@ -7,7 +7,7 @@ import java.util.TreeSet;
 
 public class Traverse_TreeSet {
 	
-	static void display(TreeSet treeset) {
+	private static void display(TreeSet treeset) {
 		Iterator iterable=treeset.iterator();
 		System.out.print("[ ");
 		while(iterable.hasNext())

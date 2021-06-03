@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 public class Pair_Sum {
-	static ArrayList get_pair(ArrayList<Integer> list,int sum) {
+	private static ArrayList get_pair(ArrayList<Integer> list,int sum) {
 		HashSet<Integer> set=new HashSet<Integer>();
 		ArrayList<Integer> result=new ArrayList<Integer>();
 		for(int i=0;i<list.size();i++) {

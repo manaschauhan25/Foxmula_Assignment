@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 
 public class Occurence_Each_Element {
-	static void frequency(ArrayList list) {
+	private static void frequency(ArrayList list) {
 		HashMap map=new HashMap();
 		for(int i=0;i<list.size();i++) {
 			if(map.containsKey(list.get(i))){

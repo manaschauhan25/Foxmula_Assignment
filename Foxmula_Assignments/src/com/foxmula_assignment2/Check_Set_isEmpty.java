@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 public class Check_Set_isEmpty {
-	static void isEmpty(HashSet<String> set) {
+	private static void isEmpty(HashSet<String> set) {
 		if(set.size()==0)
 			System.out.println("The set is empty");
 		else

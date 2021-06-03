@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Check_isEmpty {
-	static void isEmpty(ArrayList list) {
+	private static void isEmpty(ArrayList list) {
 		if(list.size()==0)
 			System.out.println("The list is empty");
 		else

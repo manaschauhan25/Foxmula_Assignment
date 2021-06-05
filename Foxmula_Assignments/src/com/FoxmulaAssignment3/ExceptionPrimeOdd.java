@@ -2,11 +2,6 @@ package com.FoxmulaAssignment3;
 
 import java.util.Scanner;
 
-class InvalidPrimeOdd extends Exception{
-	public InvalidPrimeOdd(String message) {
-		super(message);
-	}
-}
 
 public class ExceptionPrimeOdd {
 	private static boolean checkPrime(int number) {

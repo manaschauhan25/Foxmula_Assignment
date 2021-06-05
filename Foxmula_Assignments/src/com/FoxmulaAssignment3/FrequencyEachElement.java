@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class FrequencyEachElement {
-	private static void frequency(ArrayList list) {
+	public static HashMap frequency(ArrayList list) {
 		HashMap map=new HashMap(list.size());
 		for(int i=0;i<list.size();i++) {
 			if(map.containsKey(list.get(i))){
@@ -18,7 +18,7 @@ public class FrequencyEachElement {
 			}
 				
 		}
-		System.out.println(map.toString());
+		return map;
 	}
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
@@ -31,7 +31,9 @@ public class FrequencyEachElement {
 			String element=scanner.nextLine();
 			list.add(element);
 		}
-		frequency(list);
+		HashMap result=frequency(list);
+		System.out.println(result);
+		
 		
 	}
 

@@ -9,18 +9,9 @@ import java.util.Scanner;
 
 public class SortFrequency {
 	private static void Sortedfrequency(ArrayList list) {
-		HashMap<Integer, Integer> map=new HashMap<Integer, Integer>(list.size());
-		for(int i=0;i<list.size();i++) {
-			if(map.containsKey(list.get(i))){
-				int value=(Integer)(map.get(list.get(i)))+1;
-				map.replace((Integer)list.get(i), value);
-
-			}
-			else {
-				map.put((Integer)list.get(i), 1);
-			}
-				
-		}
+		FrequencyEachElement fElement=new FrequencyEachElement();
+		HashMap<Integer, Integer> map=fElement.frequency(list);
+		
 		ArrayList<Entry<Integer, Integer>> entrySet=new ArrayList<Entry<Integer, Integer>>(map.entrySet());
 		Collections.sort(entrySet, new Comparator<Entry<Integer, Integer>>(){
 			@Override
